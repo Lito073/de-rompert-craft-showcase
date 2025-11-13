@@ -7,8 +7,8 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl font-bold mb-6 text-foreground">Over Ons</h1>
@@ -65,10 +65,10 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="bg-primary text-primary-foreground p-8 rounded-lg">
+              <div className="bg-gradient-to-br from-accent via-accent/95 to-primary text-accent-foreground p-8 rounded-2xl">
                 <h2 className="text-3xl font-bold mb-4">Waarom klanten ons waarderen</h2>
                 <p className="leading-relaxed mb-4 opacity-95">
-                  Met een klantbeoordeling van 9,5 zijn wij trots op het vertrouwen dat onze klanten
+                  Met een beoordeling van 4,5 sterren (32 reviews) zijn wij trots op het vertrouwen dat onze klanten
                   in ons stellen. Dit vertrouwen komt niet vanzelf - het is het resultaat van eerlijk
                   advies, vakkundig werk en het streven om elke klus perfect af te leveren.
                 </p>

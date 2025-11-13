@@ -10,20 +10,20 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon: Icon, title, description, image }: ServiceCardProps) => {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300 group border-border/50">
       {image && (
         <div className="h-48 overflow-hidden">
           <img
             src={image}
             alt={title}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>
       )}
       <CardHeader>
         <div className="flex items-center space-x-3 mb-2">
-          <div className="p-2 bg-secondary rounded-lg">
-            <Icon className="h-6 w-6 text-secondary-foreground" />
+          <div className="p-2.5 bg-primary/10 rounded-xl group-hover:bg-primary/15 transition-colors duration-300">
+            <Icon className="h-6 w-6 text-primary" />
           </div>
           <CardTitle className="text-xl">{title}</CardTitle>
         </div>

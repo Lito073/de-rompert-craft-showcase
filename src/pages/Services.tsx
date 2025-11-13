@@ -41,19 +41,19 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold mb-6 text-foreground">Onze Diensten</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Bij Schoenmakerij De Rompert bent u aan het juiste adres voor professionele
               reparatiediensten en meer. Ontdek ons complete aanbod.
             </p>
-            <div className="mt-8 inline-flex items-center space-x-2 bg-secondary/20 px-6 py-3 rounded-full">
-              <span className="text-3xl font-bold text-secondary">9,5</span>
+            <div className="mt-8 inline-flex items-center space-x-3 bg-primary/10 px-6 py-3 rounded-full">
+              <span className="text-3xl font-bold text-primary">4,5 ★</span>
               <div className="text-left">
-                <div className="text-sm font-semibold text-foreground">Klantbeoordeling</div>
-                <div className="text-xs text-muted-foreground">Gebaseerd op klantreviews</div>
+                <div className="text-sm font-semibold text-foreground">32 reviews</div>
+                <div className="text-xs text-muted-foreground">Tevreden klanten</div>
               </div>
             </div>
           </div>
@@ -70,18 +70,26 @@ const Services = () => {
             ))}
           </div>
 
-          <div className="mt-16 bg-muted/50 rounded-lg p-8 max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-center text-foreground">Openingstijden</h2>
-            <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              <div className="flex justify-between items-center p-3 bg-card rounded border border-border">
-                <span className="font-medium">Maandag - Vrijdag</span>
-                <span className="text-muted-foreground">9:00 - 17:30</span>
+          <div className="mt-16 bg-muted/50 rounded-2xl p-8 max-w-4xl mx-auto border border-border/50">
+            <h2 className="text-2xl font-bold mb-6 text-center text-foreground">Openingstijden</h2>
+            <div className="grid md:grid-cols-2 gap-3 max-w-2xl mx-auto">
+              <div className="flex justify-between items-center p-3 bg-card rounded-lg border border-border/50">
+                <span className="font-medium">Maandag</span>
+                <span className="text-muted-foreground">12:00 - 18:00</span>
               </div>
-              <div className="flex justify-between items-center p-3 bg-card rounded border border-border">
+              <div className="flex justify-between items-center p-3 bg-card rounded-lg border border-border/50">
+                <span className="font-medium">Dinsdag - Donderdag</span>
+                <span className="text-muted-foreground">09:00 - 18:00</span>
+              </div>
+              <div className="flex justify-between items-center p-3 bg-card rounded-lg border border-border/50">
+                <span className="font-medium">Vrijdag</span>
+                <span className="text-accent font-semibold">09:00 - 20:00</span>
+              </div>
+              <div className="flex justify-between items-center p-3 bg-card rounded-lg border border-border/50">
                 <span className="font-medium">Zaterdag</span>
-                <span className="text-muted-foreground">9:00 - 17:00</span>
+                <span className="text-muted-foreground">09:00 - 17:00</span>
               </div>
-              <div className="flex justify-between items-center p-3 bg-card rounded border border-border md:col-span-2">
+              <div className="flex justify-between items-center p-3 bg-card rounded-lg border border-border/50 md:col-span-2">
                 <span className="font-medium">Zondag</span>
                 <span className="text-muted-foreground">Gesloten</span>
               </div>

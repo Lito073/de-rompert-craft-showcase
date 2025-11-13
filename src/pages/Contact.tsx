@@ -48,8 +48,8 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 lg:py-20">
+        <div className="container mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold mb-6 text-foreground">Contact</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -65,26 +65,26 @@ const Contact = () => {
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-primary rounded-lg">
-                      <Phone className="h-6 w-6 text-primary-foreground" />
+                    <div className="p-3 bg-primary/10 rounded-xl">
+                      <Phone className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-foreground">Telefoon</h3>
-                      <a href="tel:0731234567" className="text-muted-foreground hover:text-primary transition-colors">
-                        073 - 123 4567
+                      <a href="tel:+31736425737" className="text-muted-foreground hover:text-primary transition-colors">
+                        073 642 5737
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-secondary rounded-lg">
-                      <Mail className="h-6 w-6 text-secondary-foreground" />
+                    <div className="p-3 bg-accent/10 rounded-xl">
+                      <Mail className="h-6 w-6 text-accent" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-foreground">E-mail</h3>
                       <a
                         href="mailto:info@derompert.nl"
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-accent transition-colors"
                       >
                         info@derompert.nl
                       </a>
@@ -92,32 +92,45 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-accent rounded-lg">
-                      <MapPin className="h-6 w-6 text-accent-foreground" />
+                    <div className="p-3 bg-primary/10 rounded-xl">
+                      <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1 text-foreground">Adres</h3>
-                      <p className="text-muted-foreground">
-                        Hinthamerstraat 123<br />
-                        5211 MV 's-Hertogenbosch
-                      </p>
+                      <a 
+                        href="https://maps.google.com/?q=Rompertpassage+39+5233+AP+s-Hertogenbosch"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Rompertpassage 39<br />
+                        5233 AP 's-Hertogenbosch
+                      </a>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-muted rounded-lg">
-                      <Clock className="h-6 w-6 text-muted-foreground" />
+                    <div className="p-3 bg-accent/10 rounded-xl">
+                      <Clock className="h-6 w-6 text-accent" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold mb-3 text-foreground">Openingstijden</h3>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-muted-foreground">Maandag - Vrijdag:</span>
-                          <span className="font-medium">9:00 - 17:30</span>
+                          <span className="text-muted-foreground">Maandag:</span>
+                          <span className="font-medium">12:00 - 18:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Di - Do:</span>
+                          <span className="font-medium">09:00 - 18:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Vrijdag:</span>
+                          <span className="text-accent font-semibold">09:00 - 20:00</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Zaterdag:</span>
-                          <span className="font-medium">9:00 - 17:00</span>
+                          <span className="font-medium">09:00 - 17:00</span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-muted-foreground">Zondag:</span>
@@ -130,9 +143,9 @@ const Contact = () => {
               </div>
 
               {/* Google Maps */}
-              <div className="bg-muted rounded-lg overflow-hidden h-64 border border-border">
+              <div className="bg-muted rounded-xl overflow-hidden h-64 border border-border/50 shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.123456789!2d5.3047!3d51.6909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6ee7ed6b06b7b%3A0x123456789abcdef!2sHinthamerstraat%20123%2C%205211%20MV%20's-Hertogenbosch!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.123456789!2d5.3047!3d51.6909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6ee7ed6b06b7b%3A0x123456789abcdef!2sRompertpassage%2039%2C%205233%20AP%20's-Hertogenbosch!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

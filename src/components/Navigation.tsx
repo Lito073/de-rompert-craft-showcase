@@ -18,12 +18,11 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95">
+    <nav className="bg-card/80 border-b border-border/50 sticky top-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-card/60 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="De Rompert Logo" className="h-12 w-auto" />
-            <span className="text-2xl font-bold text-primary">De Rompert</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,7 +31,7 @@ const Navigation = () => {
               <Link key={item.path} to={item.path}>
                 <Button
                   variant={isActive(item.path) ? "default" : "ghost"}
-                  className="text-foreground"
+                  className={isActive(item.path) ? "" : "text-foreground"}
                 >
                   {item.name}
                 </Button>
