@@ -57,6 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "warm-leather": "hsl(var(--warm-leather))",
+        "warm-amber": "hsl(var(--warm-amber))",
+        "warm-cream": "hsl(var(--warm-cream))",
+        "craft-brown": "hsl(var(--craft-brown))",
       },
       borderRadius: {
         lg: "var(--radius)",
