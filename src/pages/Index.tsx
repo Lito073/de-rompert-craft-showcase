@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
-import { Scissors, Key, ShoppingBag, Package, Award, Clock } from "lucide-react";
+import { Scissors, Key, ShoppingBag, Package, Award, Clock, Hammer, Euro, Handshake } from "lucide-react";
+import serviceShoes from "@/assets/service-shoes.jpg";
+import serviceKeys from "@/assets/service-keys.jpg";
+import serviceBags from "@/assets/service-bags.jpg";
+import heroCraftsman from "@/assets/hero-craftsman.jpg";
 import heroImage from "@/assets/hero-craftsman.jpg";
 
 const Index = () => {
@@ -124,26 +128,123 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center text-foreground">
-              Waarom kiezen voor De Rompert?
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground">
+              Waarom Kiezen Voor Schoenmakerij De Rompert?
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-card p-6 rounded-lg border border-border">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Vakmanschap</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Met jarenlange ervaring en vakkennis repareren wij uw schoenen, tassen en maken wij
-                  sleutels bij met de grootste zorg en precisie.
-                </p>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Image Grid with Rating Overlay */}
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="overflow-hidden rounded-lg h-48">
+                      <img 
+                        src={serviceKeys} 
+                        alt="Sleutelservice" 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </div>
+                    <div className="overflow-hidden rounded-lg h-64">
+                      <img 
+                        src={serviceShoes} 
+                        alt="Schoenreparatie handwerk" 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-4 pt-8">
+                    <div className="overflow-hidden rounded-lg h-64">
+                      <img 
+                        src={serviceBags} 
+                        alt="Leerwaren reparatie" 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </div>
+                    <div className="overflow-hidden rounded-lg h-48">
+                      <img 
+                        src={heroCraftsman} 
+                        alt="Vakmanschap" 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Rating Card Overlay */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 text-center border border-border">
+                  <div className="text-6xl font-bold text-primary mb-2">9,5</div>
+                  <div className="flex justify-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Award key={i} className="w-6 h-6 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground">Klantbeoordeling</div>
+                </div>
               </div>
-              <div className="bg-card p-6 rounded-lg border border-border">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Persoonlijke Service</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Bij ons staat u centraal. Wij luisteren naar uw wensen en adviseren u persoonlijk
-                  over de beste oplossing voor uw reparatie.
+
+              {/* Benefits List */}
+              <div className="space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  Met meer dan 40 jaar ervaring in het hart van 's-Hertogenbosch, staan wij voor kwaliteit en persoonlijke service. Elk item krijgt de aandacht die het verdient.
                 </p>
+                
+                <div className="space-y-6">
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                      <Hammer className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Vakmanschap van Generaties</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Traditionele technieken gecombineerd met moderne apparatuur voor het beste resultaat.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                      <Clock className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Snelle Service</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Veel reparaties kunnen terwijl u wacht worden uitgevoerd. Uw tijd is waardevol.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                      <Handshake className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Persoonlijke Benadering</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        We kennen onze klanten en hun wensen. Bij ons bent u geen nummer maar een gewaardeerde bezoeker.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                      <Euro className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-foreground">Eerlijke Prijzen</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Transparante prijzen zonder verborgen kosten. U krijgt altijd vooraf een duidelijke offerte.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <Link to="/over-ons" className="inline-flex items-center text-primary hover:underline font-medium mt-4 group">
+                  Lees meer over ons 
+                  <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                </Link>
               </div>
             </div>
           </div>
