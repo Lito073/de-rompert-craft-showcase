@@ -130,7 +130,7 @@ const Contact = () => {
               {/* Google Maps */}
               <div className="bg-muted rounded-xl overflow-hidden h-64 border border-border/50 shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.123456789!2d5.3047!3d51.6909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6ee7ed6b06b7b%3A0x123456789abcdef!2sRompertpassage%2039%2C%205233%20AP%20's-Hertogenbosch!5e0!3m2!1snl!2snl!4v1234567890123!5m2!1snl!2snl"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2464.8!2d5.3137398!3d51.7128746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6ee7ed6b06b7b%3A0x2755776737!2sSchoenmakerij%20de%20Rompert!5e0!3m2!1snl!2snl!4v1699999999999!5m2!1snl!2snl"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
