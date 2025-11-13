@@ -27,9 +27,9 @@ const About = () => {
                   persoonlijke aandacht.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Eigenaar Jan de Rompert groeide op in een familie waar repareren en vakmanschap
-                  altijd centraal stonden. Die passie voor het vak en de liefde voor het perfect
-                  herstellen van dierbare spullen vormen nog steeds de kern van onze dienstverlening.
+                  Gelegen in de Rompertpassage in het hart van 's-Hertogenbosch, bieden wij een breed
+                  scala aan diensten. Van vakkundige schoenreparatie tot sleutelservice en het herstellen
+                  van lederwaren - elk item krijgt bij ons de zorg en aandacht die het verdient.
                 </p>
               </div>
 
@@ -73,11 +73,11 @@ const About = () => {
                   advies, vakkundig werk en het streven om elke klus perfect af te leveren.
                 </p>
                 <p className="leading-relaxed opacity-95">
-                  Of u nu komt voor een eenvoudige schoenherstel, het bijmaken van sleutels of de
-                  reparatie van een bijzonder stuk, bij De Rompert behandelen wij elk item met
-                  hetzelfde respect en dezelfde professionaliteit. Want wij begrijpen dat het vaak om
+                  Of u nu komt voor schoenreparatie, het bijmaken van sleutels of de
+                  reparatie van lederwaren, bij Schoenmakerij De Rompert behandelen wij elk item met
+                  respect en professionaliteit. Want wij begrijpen dat het vaak om
                   meer gaat dan alleen een reparatie - het gaat om uw favoriete schoenen, uw
-                  vertrouwde tas, of de sleutel tot uw veilige thuis.
+                  vertrouwde tas, of de sleutel tot uw thuis.
                 </p>
               </div>
             </div>
