@@ -126,12 +126,17 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <ServiceCard
+              <div
                 key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-              />
+                className="opacity-0 animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <ServiceCard
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                />
+              </div>
             ))}
           </div>
 

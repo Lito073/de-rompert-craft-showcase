@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { Scissors, Key, ShoppingBag, Package } from "lucide-react";
@@ -42,6 +43,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <Breadcrumbs />
 
       <section className="py-16 lg:py-20">
         <div className="container mx-auto">

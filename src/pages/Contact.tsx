@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -55,6 +56,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <Breadcrumbs />
 
       <section className="py-16 lg:py-20">
         <div className="container mx-auto">
