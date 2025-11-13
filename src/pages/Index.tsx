@@ -8,6 +8,8 @@ import serviceShoes from "@/assets/service-shoes.jpg";
 import serviceKeys from "@/assets/service-keys.jpg";
 import serviceBags from "@/assets/service-bags.jpg";
 import heroCraftsman from "@/assets/hero-craftsman.jpg";
+import keyMaking1 from "@/assets/key-making-1.jpg";
+import keyMaking2 from "@/assets/key-making-2.jpg";
 
 const Index = () => {
   const services = [
@@ -177,15 +179,15 @@ const Index = () => {
                   <div className="space-y-3 lg:space-y-4 pt-6 lg:pt-8">
                     <div className="overflow-hidden rounded-lg h-52 lg:h-64">
                       <img 
-                        src={serviceBags} 
-                        alt="Leerwaren reparatie" 
+                        src={keyMaking1} 
+                        alt="Sleutels maken" 
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
                     <div className="overflow-hidden rounded-lg h-40 lg:h-48">
                       <img 
-                        src={heroCraftsman} 
-                        alt="Vakmanschap" 
+                        src={keyMaking2} 
+                        alt="Vakmanschap sleutelservice" 
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
