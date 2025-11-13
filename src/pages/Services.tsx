@@ -5,6 +5,7 @@ import { Scissors, Key, ShoppingBag, Package } from "lucide-react";
 import shoeImage from "@/assets/service-shoes.jpg";
 import keyImage from "@/assets/service-keys.jpg";
 import bagImage from "@/assets/service-bags.jpg";
+import dhlImage from "@/assets/service-dhl.jpg";
 
 const Services = () => {
   const services = [
@@ -32,6 +33,7 @@ const Services = () => {
     {
       icon: Package,
       title: "DHL Pakketservice",
+      image: dhlImage,
       description:
         "Als DHL ServicePoint kunt u bij ons gemakkelijk pakketten verzenden en ophalen. U kunt uw pakketten hier afgeven voor verzending of de pakketten ophalen die voor u klaarliggen. Handig gecombineerd met een bezoek aan onze andere diensten.",
     },
