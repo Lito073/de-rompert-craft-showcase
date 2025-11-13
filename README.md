@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# De Rompert Craft Showcase
 
-## Project info
+Een moderne showcase website voor Schoenmakerij De Rompert in 's-Hertogenbosch. Deze website presenteert de diensten en vakmanschap van de schoenmakerij op een professionele en gebruiksvriendelijke manier.
 
-**URL**: https://lovable.dev/projects/ad0ce0c9-f8f2-4738-9f54-c9ac82a43ba9
+## Over het Project
 
-## How can I edit this code?
+Dit is een voorbeeld website ontwikkeld voor Schoenmakerij De Rompert, gevestigd in de Rompertpassage in 's-Hertogenbosch. De website toont de verschillende diensten die de zaak aanbiedt, waaronder schoenreparatie, sleutelservice, tassenreparatie en DHL pakketservice.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- 🏠 **Homepage** met hero sectie en diensten overzicht
+- 🛠️ **Diensten pagina** met gedetailleerde informatie over alle services
+- 👤 **Over Ons pagina** met bedrijfsinformatie en waardes
+- 📞 **Contact pagina** met openingstijden en locatie informatie
+- 📱 **Responsive design** voor alle apparaten
+- ⭐ **Review integratie** (4,5 sterren rating)
+- 🎨 **Modern UI** met smooth animaties en transitions
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ad0ce0c9-f8f2-4738-9f54-c9ac82a43ba9) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Vite** - Build tool en development server
+- **React** - UI framework
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - UI component library
+- **React Router** - Client-side routing
+- **Lucide React** - Icon library
 
-**Use your preferred IDE**
+## Installatie
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+# Clone de repository
+git clone git@github.com:Lito073/de-rompert-craft-showcase.git
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Navigeer naar de project directory
+cd de-rompert-craft-showcase
 
-Follow these steps:
+# Installeer dependencies
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run dev          # Start development server
+npm run build        # Build voor productie
+npm run preview      # Preview productie build
+npm run lint         # Run ESLint
+```
 
-**Use GitHub Codespaces**
+## Project Structuur
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── assets/          # Afbeeldingen en media
+├── components/      # Herbruikbare React componenten
+│   ├── ui/         # shadcn/ui componenten
+│   ├── Navigation.tsx
+│   ├── Footer.tsx
+│   └── ServiceCard.tsx
+├── pages/          # Route pagina's
+│   ├── Index.tsx
+│   ├── About.tsx
+│   ├── Services.tsx
+│   └── Contact.tsx
+├── hooks/          # Custom React hooks
+├── lib/            # Utility functies
+├── App.tsx         # Main app component
+└── main.tsx        # Entry point
+```
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+De website kan eenvoudig gedeployed worden naar verschillende platforms:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vercel** - `vercel deploy`
+- **Netlify** - Drag & drop build folder
+- **GitHub Pages** - Via GitHub Actions
 
-## How can I deploy this project?
+## Contact Informatie
 
-Simply open [Lovable](https://lovable.dev/projects/ad0ce0c9-f8f2-4738-9f54-c9ac82a43ba9) and click on Share -> Publish.
+**Schoenmakerij De Rompert**
+- Adres: Rompertpassage 39, 5233 AP 's-Hertogenbosch
+- Telefoon: 073 642 5737
+- Rating: 4,5 ★ (32 reviews)
 
-## Can I connect a custom domain to my Lovable project?
+## Licentie
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Dit project is ontwikkeld als showcase website.
