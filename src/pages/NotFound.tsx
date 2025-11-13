@@ -47,8 +47,8 @@ const NotFound = () => {
                 <h3 className="font-semibold text-foreground mb-1">Diensten</h3>
                 <p className="text-sm text-muted-foreground">Bekijk onze diensten</p>
               </Link>
-              <Link to="/faq" className="p-4 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow">
-                <h3 className="font-semibold text-foreground mb-1">FAQ</h3>
+              <Link to="/veelgestelde-vragen" className="p-4 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow">
+                <h3 className="font-semibold text-foreground mb-1">Vragen</h3>
                 <p className="text-sm text-muted-foreground">Veelgestelde vragen</p>
               </Link>
               <Link to="/contact" className="p-4 bg-card border border-border rounded-lg hover:shadow-lg transition-shadow">
