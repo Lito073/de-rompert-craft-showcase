@@ -77,21 +77,6 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="p-3 bg-accent/10 rounded-xl">
-                      <Mail className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1 text-foreground">E-mail</h3>
-                      <a
-                        href="mailto:info@derompert.nl"
-                        className="text-muted-foreground hover:text-accent transition-colors"
-                      >
-                        info@derompert.nl
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
                     <div className="p-3 bg-primary/10 rounded-xl">
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
