@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.avif";
 
 const Navigation = () => {
   const location = useLocation();
@@ -20,7 +21,8 @@ const Navigation = () => {
     <nav className="bg-card border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-card/95">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={logo} alt="De Rompert Logo" className="h-12 w-auto" />
             <span className="text-2xl font-bold text-primary">De Rompert</span>
           </Link>
 
