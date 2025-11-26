@@ -216,7 +216,11 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer>
+        <svg className="absolute top-0 left-0 w-full h-24" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,0 L0,64 C160,100 320,100 480,64 C640,28 800,28 960,64 C1120,100 1280,100 1440,64 L1440,0 Z" fill="hsl(var(--background))"/>
+        </svg>
+      </Footer>
     </div>
   );
 };
