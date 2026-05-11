@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Local Codex/user workspace files
+.codex/
+docs/client-brief.md
+docs/private/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
