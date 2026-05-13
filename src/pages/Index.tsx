@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import SectionWave from "@/components/SectionWave";
 import { Button } from "@/components/ui/button";
 import { StructuredData } from "@/components/StructuredData";
 import { getOrganizationSchema } from "@/lib/structuredData";
@@ -75,8 +76,9 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-muted/35">
-          <div className="container mx-auto">
+        <section className="relative overflow-hidden bg-muted/35 pt-24 pb-16 lg:pt-28">
+          <SectionWave tone="background" variant="gentle" />
+          <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 items-start">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Ambacht, service en kwaliteit</h2>
@@ -109,8 +111,9 @@ const Index = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto">
+        <section className="relative overflow-hidden bg-background pt-24 pb-20 lg:pt-28 lg:pb-24">
+          <SectionWave tone="muted" variant="rolling" flip className="opacity-70" />
+          <div className="container mx-auto relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Twee winkels, duidelijk gescheiden informatie</h2>
               <p className="text-muted-foreground text-lg">

@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import SectionWave from "@/components/SectionWave";
 import ServiceCard from "@/components/ServiceCard";
 import { Button } from "@/components/ui/button";
 import { StructuredData } from "@/components/StructuredData";
@@ -36,8 +37,8 @@ const Location = () => {
       <Breadcrumbs />
 
       <main>
-        <section className="py-14 lg:py-20 bg-[radial-gradient(circle_at_top_left,hsl(var(--secondary)/0.22),transparent_36rem)]">
-          <div className="container mx-auto">
+        <section className="relative overflow-hidden py-14 lg:py-20 bg-[radial-gradient(circle_at_top_left,hsl(var(--secondary)/0.22),transparent_36rem)]">
+          <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Vestiging {location.shortName}</p>
@@ -97,8 +98,9 @@ const Location = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-muted/35">
-          <div className="container mx-auto">
+        <section className="relative overflow-hidden bg-muted/35 pt-24 pb-16 lg:pt-28">
+          <SectionWave tone="background" variant="gentle" />
+          <div className="container mx-auto relative z-10">
             <div className="max-w-3xl mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Diensten in {location.shortName}</h2>
               <p className="text-lg text-muted-foreground">
@@ -113,8 +115,8 @@ const Location = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-background">
-          <div className="container mx-auto">
+        <section className="relative overflow-hidden bg-background pt-20 pb-20 lg:pb-24">
+          <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-center">
               <div className="rounded-lg bg-primary text-primary-foreground p-8">
                 <Quote className="h-10 w-10 mb-5 opacity-80" />

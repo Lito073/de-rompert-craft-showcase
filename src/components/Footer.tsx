@@ -3,16 +3,20 @@ import { Clock, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/logo.avif";
 import { getLocationPath, getMapsUrl, locations, SITE_NAME } from "@/data/locations";
 import { ReactNode } from "react";
+import SectionWave from "@/components/SectionWave";
+
+type FooterWaveTone = "background" | "muted" | "primary" | "secondary" | "accent" | "card";
 
 interface FooterProps {
   children?: ReactNode;
+  waveTone?: FooterWaveTone;
 }
 
-const Footer = ({ children }: FooterProps) => {
+const Footer = ({ children, waveTone = "background" }: FooterProps) => {
   return (
     <footer className="bg-primary text-primary-foreground relative overflow-hidden">
-      {children}
-      <div className="container mx-auto py-12 relative">
+      {children ?? <SectionWave tone={waveTone} variant="footer" className="h-20 md:h-24 lg:h-28" />}
+      <div className="container mx-auto pt-28 pb-12 relative z-10 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
