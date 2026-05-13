@@ -6,6 +6,8 @@ const Breadcrumbs = () => {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   const breadcrumbNameMap: { [key: string]: string } = {
+    "vught": "Vught",
+    "den-bosch": "Den Bosch",
     "diensten": "Diensten",
     "over-ons": "Over ons",
     "veelgestelde-vragen": "Veelgestelde vragen",

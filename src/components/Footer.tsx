@@ -1,5 +1,7 @@
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Clock, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/logo.avif";
+import { getLocationPath, getMapsUrl, locations, SITE_NAME } from "@/data/locations";
 import { ReactNode } from "react";
 
 interface FooterProps {
@@ -10,81 +12,57 @@ const Footer = ({ children }: FooterProps) => {
   return (
     <footer className="bg-primary text-primary-foreground relative overflow-hidden">
       {children}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:20px_20px]" style={{ zIndex: 0 }} />
-      <div className="container mx-auto pt-32 pb-12 relative">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto py-12 relative">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="De Rompert Logo" className="h-10 w-auto brightness-0 invert" />
-              <h3 className="text-xl font-bold">Schoenmakerij De Rompert</h3>
+              <img src={logo} alt="Schoenmakerij Donders logo" className="h-10 w-auto brightness-0 invert" />
+              <h2 className="text-xl font-bold">{SITE_NAME}</h2>
             </div>
-            <p className="text-sm opacity-90">
-              Uw specialist voor vakkundige schoenreparatie, sleutelservice en meer in 's-Hertogenbosch.
+            <p className="text-sm opacity-90 max-w-md">
+              Familiebedrijf voor schoenreparatie, sleutelservice, tas reparatie, onderhoud en lederwaren in Vught en Den Bosch.
             </p>
-            <div className="mt-4 flex items-center space-x-2">
-              <div className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                ⭐ 4,5
-              </div>
-              <span className="text-sm opacity-90">(32 reviews)</span>
-            </div>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold mb-4 flex items-center">
-              <Clock className="h-5 w-5 mr-2" />
-              Openingstijden
-            </h4>
-            <div className="space-y-2 text-sm opacity-90">
-              <div className="flex justify-between">
-                <span>Maandag:</span>
-                <span>12:00 - 18:00</span>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {locations.map((location) => (
+              <div key={location.id}>
+                <h3 className="text-lg font-semibold mb-3">{location.shortName}</h3>
+                <div className="space-y-3 text-sm opacity-90">
+                  <a href={getMapsUrl(location)} target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:opacity-80">
+                    <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                    <span>
+                      {location.address.streetAddress}
+                      <br />
+                      {location.address.postalCode} {location.address.locality}
+                    </span>
+                  </a>
+                  <a href={`tel:${location.phoneHref}`} className="flex items-center gap-2 hover:opacity-80">
+                    <Phone className="h-5 w-5 flex-shrink-0" />
+                    {location.phoneDisplay}
+                  </a>
+                  <div className="flex items-start gap-2">
+                    <Clock className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                    <div>
+                      {location.openingHours.map((row) => (
+                        <div key={row.label} className="flex justify-between gap-3">
+                          <span>{row.label}</span>
+                          <span>{row.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <Link to={getLocationPath(location)} className="inline-block font-semibold underline-offset-4 hover:underline">
+                    Bekijk vestiging
+                  </Link>
+                </div>
               </div>
-              <div className="flex justify-between">
-                <span>Dinsdag - Donderdag:</span>
-                <span>09:00 - 18:00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Vrijdag:</span>
-                <span>09:00 - 20:00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Zaterdag:</span>
-                <span>09:00 - 17:00</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Zondag:</span>
-                <span>Gesloten</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-3 text-sm opacity-90">
-              <div className="flex items-start">
-                <Phone className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <a href="tel:+31736425737" className="hover:text-primary-foreground transition-colors">
-                  073 642 5737
-                </a>
-              </div>
-              <div className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <a 
-                  href="https://maps.google.com/?q=Rompertpassage+39+5233+AP+s-Hertogenbosch" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-foreground transition-colors"
-                >
-                  Rompertpassage 39<br />
-                  5233 AP 's-Hertogenbosch
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm opacity-75">
-          <p>&copy; {new Date().getFullYear()} Schoenmakerij De Rompert. Alle rechten voorbehouden.</p>
+        <div className="border-t border-primary-foreground/20 mt-10 pt-6 text-center text-sm opacity-75">
+          <p>&copy; {new Date().getFullYear()} {SITE_NAME}. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </footer>

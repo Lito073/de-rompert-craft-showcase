@@ -1,97 +1,113 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Footer from "@/components/Footer";
-import { Heart, Wrench, Users } from "lucide-react";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { StructuredData } from "@/components/StructuredData";
+import { getBreadcrumbSchema } from "@/lib/structuredData";
+import { BRAND_QUOTE, getLocationPath, locations } from "@/data/locations";
+import { Heart, Quote, ShieldCheck, Users, Wrench } from "lucide-react";
+
+const values = [
+  {
+    title: "Klantvriendelijkheid",
+    description: "Een persoonlijke benadering en helder advies per klant en per reparatie.",
+    icon: Heart,
+  },
+  {
+    title: "Service",
+    description: "Meedenken, praktisch helpen en duidelijk maken wat bij welke vestiging mogelijk is.",
+    icon: Users,
+  },
+  {
+    title: "Kwaliteit",
+    description: "Ambachtelijk werk met zorg voor materialen, afwerking en dagelijks gebruik.",
+    icon: ShieldCheck,
+  },
+];
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Over ons | Familiebedrijf Schoenmakerij Donders"
+        description="Schoenmakerij Donders is een familiebedrijf sinds 2017 met vestigingen in Vught en Den Bosch. Lees over het verhaal, de service en de kwaliteit."
+        path="/over-ons"
+      />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Over ons", path: "/over-ons" }])} />
       <Navigation />
       <Breadcrumbs />
 
-      <section className="py-16 lg:py-20">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6 text-foreground">Over Ons</h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Vakmanschap en persoonlijke aandacht in het hart van 's-Hertogenbosch
+      <main>
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto">
+            <div className="max-w-4xl mx-auto text-center mb-14">
+              <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Familiebedrijf sinds 2017</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Over Schoenmakerij Donders</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Wat begon in Vught is uitgegroeid tot een familiebedrijf met twee vestigingen. De basis is hetzelfde gebleven:
+                klantvriendelijkheid, service en kwaliteit.
               </p>
             </div>
 
-            <div className="prose prose-lg max-w-none mb-12">
-              <div className="bg-card p-8 rounded-lg border border-border mb-8">
-                <h2 className="text-3xl font-bold mb-4 text-primary">Onze Passie</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Schoenmakerij De Rompert is meer dan alleen een reparatiezaak. Het is een plek waar
-                  vakmanschap en traditie samenkomen met moderne service. Al jarenlang zijn wij het
-                  vertrouwde adres in 's-Hertogenbosch voor iedereen die waarde hecht aan kwaliteit en
-                  persoonlijke aandacht.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Gelegen in de Rompertpassage in het hart van 's-Hertogenbosch, bieden wij een breed
-                  scala aan diensten. Van vakkundige schoenreparatie tot sleutelservice en het herstellen
-                  van lederwaren - elk item krijgt bij ons de zorg en aandacht die het verdient.
-                </p>
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start mb-14">
+              <div className="rounded-lg bg-primary text-primary-foreground p-8">
+                <Quote className="h-10 w-10 mb-5 opacity-80" />
+                <p className="text-2xl md:text-3xl font-semibold leading-snug">“{BRAND_QUOTE}”</p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-muted/50 p-6 rounded-lg text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
-                    <Heart className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Passie voor het vak</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Elke reparatie wordt uitgevoerd met de grootste zorg en aandacht voor detail
+              <div className="rounded-lg border border-border bg-card p-8">
+                <h2 className="text-3xl font-bold text-foreground mb-4">Van Vught naar Den Bosch</h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Schoenmakerij Donders is een familiebedrijf sinds 2017. De eerste vestiging opende in Vught en wordt gerund
+                    door Corne en Linda.
+                  </p>
+                  <p>
+                    Vanaf 2025 is er een filiaal bij in Den Bosch. Deze vestiging wordt gerund door Jimmy, de zoon van Corne.
+                    Beide winkels hebben hun eigen locatiegegevens en diensten, maar delen dezelfde aandacht voor mensen en vakwerk.
                   </p>
                 </div>
-
-                <div className="bg-muted/50 p-6 rounded-lg text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary rounded-full mb-4">
-                    <Wrench className="h-8 w-8 text-secondary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Vakmanschap</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Jarenlange ervaring en kennis van traditionele en moderne technieken
-                  </p>
-                </div>
-
-                <div className="bg-muted/50 p-6 rounded-lg text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-accent rounded-full mb-4">
-                    <Users className="h-8 w-8 text-accent-foreground" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">Persoonlijke service</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Wij luisteren naar uw wensen en denken mee over de beste oplossing
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-accent via-accent/95 to-primary text-accent-foreground p-8 rounded-2xl">
-                <h2 className="text-3xl font-bold mb-4">Waarom klanten ons waarderen</h2>
-                <p className="leading-relaxed mb-4 opacity-95">
-                  Met een beoordeling van 4,5 sterren (32 reviews) zijn wij trots op het vertrouwen dat onze klanten
-                  in ons stellen. Dit vertrouwen komt niet vanzelf - het is het resultaat van eerlijk
-                  advies, vakkundig werk en het streven om elke klus perfect af te leveren.
-                </p>
-                <p className="leading-relaxed opacity-95">
-                  Of u nu komt voor schoenreparatie, het bijmaken van sleutels of de
-                  reparatie van lederwaren, bij Schoenmakerij De Rompert behandelen wij elk item met
-                  respect en professionaliteit. Want wij begrijpen dat het vaak om
-                  meer gaat dan alleen een reparatie - het gaat om uw favoriete schoenen, uw
-                  vertrouwde tas, of de sleutel tot uw thuis.
-                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <Footer>
-        <svg className="absolute top-0 left-0 w-full h-24" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L0,64 C160,100 320,100 480,64 C640,28 800,28 960,64 C1120,100 1280,100 1440,64 L1440,0 Z" fill="hsl(var(--background))"/>
-        </svg>
-      </Footer>
+            <div className="grid md:grid-cols-3 gap-5 mb-14">
+              {values.map(({ title, description, icon: Icon }) => (
+                <div key={title} className="rounded-lg border border-border bg-card p-6">
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{description}</p>
+                </div>
+              ))}
+            </div>
+
+            <section className="rounded-lg bg-muted/35 p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <Wrench className="h-7 w-7 text-primary" />
+                <h2 className="text-2xl font-bold text-foreground">Onze vestigingen</h2>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {locations.map((location) => (
+                  <div key={location.id} className="rounded-lg border border-border bg-card p-5">
+                    <h3 className="text-xl font-bold text-foreground mb-2">{location.name}</h3>
+                    <p className="text-muted-foreground mb-4">
+                      {location.address.streetAddress}, {location.address.postalCode} {location.address.locality}
+                    </p>
+                    <Button asChild variant="outline">
+                      <Link to={getLocationPath(location)}>Bekijk {location.shortName}</Link>
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };
