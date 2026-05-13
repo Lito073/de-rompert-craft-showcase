@@ -1,10 +1,11 @@
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import SectionWave from "@/components/SectionWave";
 import ServiceCard from "@/components/ServiceCard";
+import NotFound from "@/pages/NotFound";
 import { Button } from "@/components/ui/button";
 import { StructuredData } from "@/components/StructuredData";
 import { getBreadcrumbSchema, getLocalBusinessSchema } from "@/lib/structuredData";
@@ -16,7 +17,7 @@ const Location = () => {
   const location = getLocationBySlug(slug);
 
   if (!location) {
-    return <Navigate to="/" replace />;
+    return <NotFound />;
   }
 
   const otherLocations = locations.filter((item) => item.id !== location.id);

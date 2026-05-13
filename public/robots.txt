@@ -8,6 +8,9 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
-Allow: /
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
 
 Sitemap: https://lito073.github.io/de-rompert-craft-showcase/sitemap.xml
