@@ -1,0 +1,24 @@
+# Schoenmakerij Donders
+
+> Ambachtelijke schoenmakerij met vestigingen in Vught en Den Bosch.
+
+Deze website helpt bezoekers snel de juiste vestiging, diensten, openingstijden, route en contactinformatie te vinden. Gebruik alleen informatie die zichtbaar op de website staat; diensten en openingstijden kunnen per locatie verschillen.
+
+## Belangrijke pagina's
+
+- [Home](https://lito073.github.io/de-rompert-craft-showcase/): locatiekeuze voor Vught en Den Bosch.
+- [Locatie Vught](https://lito073.github.io/de-rompert-craft-showcase/vught): Schoenmakerij Donders Vught aan de Raadhuisstraat 3D.
+- [Locatie Den Bosch](https://lito073.github.io/de-rompert-craft-showcase/den-bosch): Schoenmakerij Donders Den Bosch in de Rompertpassage.
+- [Diensten](https://lito073.github.io/de-rompert-craft-showcase/diensten): overzicht van diensten per vestiging.
+- [Over ons](https://lito073.github.io/de-rompert-craft-showcase/over-ons): familiebedrijf sinds 2017.
+- [Contact](https://lito073.github.io/de-rompert-craft-showcase/contact): adressen, telefoonnummer, openingstijden en route per vestiging.
+- [Veelgestelde vragen](https://lito073.github.io/de-rompert-craft-showcase/veelgestelde-vragen): korte antwoorden over locaties, diensten en praktische winkelinformatie.
+
+## Locaties
+
+- Schoenmakerij Donders Vught: Raadhuisstraat 3D, 5261 EH Vught.
+- Schoenmakerij Donders Den Bosch: Rompertpassage 39, 5233 AP Den Bosch.
+
+## Diensten
+
+De website noemt onder meer schoenreparatie, sleutelservice, tas reparatie, onderhoud, lederwaren, horlogebandjes, DHL servicepoint in Vught, sneaker service in Den Bosch en vragen over gewone sleutels en autosleutels in Den Bosch.

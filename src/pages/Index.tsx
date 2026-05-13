@@ -22,8 +22,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Schoenmakerij Donders | Kies Vught of Den Bosch"
-        description="Kies uw Schoenmakerij Donders vestiging in Vught of Den Bosch voor schoenreparatie, sleutelservice, tas reparatie, onderhoud en lederwaren."
+        title="Schoenmakerij Donders | Schoenmakerij in Vught en Den Bosch"
+        description="Schoenmakerij Donders in Vught en Den Bosch voor schoenreparatie, sleutelservice, tas reparatie, onderhoud, lederwaren en praktische winkelservices."
       />
       <StructuredData data={getOrganizationSchema()} />
       <Navigation />
@@ -32,14 +32,15 @@ const Index = () => {
         <section className="relative overflow-hidden bg-background py-14 lg:py-20">
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[1fr_0.9fr] gap-10 xl:gap-16 items-center">
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Familiebedrijf sinds 2017</p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground mb-5">
-                  Kies uw Schoenmakerij Donders vestiging
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground mb-5 break-words">
+                  Schoenmakerij Donders in Vught en Den Bosch
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mb-8">
-                  Vught en Den Bosch hebben ieder hun eigen diensten, openingstijden en adres. Kies de winkel die u wilt bezoeken,
-                  dan ziet u meteen de juiste informatie.
+                  Voor schoenreparatie, sleutelservice, tas reparatie, onderhoud en lederwaren kunt u terecht bij onze vestigingen in
+                  Vught en Den Bosch. Kies de winkel die u wilt bezoeken voor het juiste adres, de openingstijden en de diensten per
+                  locatie.
                 </p>
                 <div className="mb-8 flex flex-wrap gap-2.5">
                   {brandHighlights.map(({ label, icon: Icon }) => (
@@ -100,8 +101,8 @@ const Index = () => {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Ambacht, service en kwaliteit</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  De stijl blijft warm en persoonlijk: repareren wat waarde heeft, meedenken met de klant en duidelijk maken welke
-                  vestiging het beste past bij uw bezoek.
+                  We repareren wat waarde heeft, denken mee over de beste oplossing en helpen u graag met schoenen, sleutels,
+                  tassen, onderhoud en lederwaren. Zo weet u snel welke vestiging past bij uw bezoek.
                 </p>
                 <div className="rounded-lg bg-primary text-primary-foreground p-6">
                   <Quote className="h-8 w-8 mb-4 opacity-80" />
@@ -134,7 +135,7 @@ const Index = () => {
             <div className="text-center max-w-3xl mx-auto mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Twee winkels, duidelijk gescheiden informatie</h2>
               <p className="text-muted-foreground text-lg">
-                Gebruik de locatiepagina's voor de meest actuele vestiging-specifieke diensten, openingstijden en route.
+                Bekijk per vestiging het adres, de route, openingstijden en diensten. Zo komt u direct bij de juiste winkel uit.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">

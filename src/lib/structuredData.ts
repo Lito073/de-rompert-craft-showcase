@@ -5,6 +5,11 @@ type BreadcrumbItem = {
   path: string;
 };
 
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
 export const getBreadcrumbSchema = (items: BreadcrumbItem[]) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -65,6 +70,19 @@ export const getLocalBusinessSchema = (location: ShopLocation) => ({
       "@type": "Service",
       name: service.title,
       description: service.description,
+    },
+  })),
+});
+
+export const getFAQPageSchema = (items: FAQItem[]) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
     },
   })),
 });

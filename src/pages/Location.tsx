@@ -40,9 +40,9 @@ const Location = () => {
         <section className="relative overflow-hidden py-14 lg:py-20 bg-[radial-gradient(circle_at_top_left,hsl(var(--secondary)/0.22),transparent_36rem)]">
           <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Vestiging {location.shortName}</p>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5 break-words">
                   {location.name}
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mb-6">{location.intro}</p>
@@ -101,11 +101,22 @@ const Location = () => {
         <section className="relative overflow-hidden bg-muted/35 pt-24 pb-16 lg:pt-28">
           <SectionWave tone="background" variant="gentle" />
           <div className="container mx-auto relative z-10">
-            <div className="max-w-3xl mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Diensten in {location.shortName}</h2>
-              <p className="text-lg text-muted-foreground">
-                Deze diensten horen specifiek bij de vestiging in {location.shortName}, zodat u meteen ziet waar u terecht kunt.
-              </p>
+            <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 mb-10 items-start">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Diensten in {location.shortName}</h2>
+                <p className="text-lg text-muted-foreground">
+                  Bekijk waarvoor u bij Schoenmakerij Donders {location.shortName} terecht kunt. De diensten verschillen per
+                  vestiging, zodat u meteen de juiste winkel kiest.
+                </p>
+              </div>
+              <div className="grid gap-4">
+                {location.answers.map((item) => (
+                  <article key={item.question} className="rounded-lg border border-border bg-card p-5 shadow-sm">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{item.question}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.answer}</p>
+                  </article>
+                ))}
+              </div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {location.services.map((service) => (
@@ -125,8 +136,8 @@ const Location = () => {
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Familiebedrijf met aandacht voor mensen</h2>
                 <p className="text-muted-foreground leading-relaxed mb-5">
-                  Schoenmakerij Donders staat voor klantvriendelijkheid, service en kwaliteit. Sinds de start in Vught is het bedrijf
-                  gegroeid naar twee vestigingen, met dezelfde persoonlijke aanpak per winkel.
+                  Schoenmakerij Donders staat voor klantvriendelijkheid, service en kwaliteit. Sinds de start in Vught is het
+                  familiebedrijf gegroeid naar twee vestigingen, met dezelfde persoonlijke aanpak per winkel.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {otherLocations.map((otherLocation) => (

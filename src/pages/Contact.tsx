@@ -14,7 +14,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Contact | Schoenmakerij Donders Vught en Den Bosch"
-        description="Neem contact op met Schoenmakerij Donders in Vught of Den Bosch. Bekijk adressen, telefoonnummers, openingstijden en routes per vestiging."
+        description="Neem contact op met Schoenmakerij Donders in Vught of Den Bosch. Bekijk per vestiging het adres, telefoonnummer, openingstijden en de route."
         path="/contact"
       />
       <StructuredData data={getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }])} />
@@ -27,7 +27,8 @@ const Contact = () => {
             <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contact per vestiging</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Waar mogen we u helpen?</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Kies hieronder de vestiging die u wilt bezoeken. Zo blijven adres, diensten en openingstijden duidelijk gescheiden.
+              Kies de vestiging die u wilt bezoeken voor schoenreparatie, sleutelservice, tas reparatie, onderhoud of lederwaren. U
+              ziet direct het juiste adres, telefoonnummer, de openingstijden en de route.
             </p>
           </div>
 

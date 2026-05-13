@@ -18,6 +18,11 @@ export type LocationService = {
   icon: LucideIcon;
 };
 
+export type LocationAnswer = {
+  question: string;
+  answer: string;
+};
+
 export type ShopLocation = {
   id: "vught" | "den-bosch";
   slug: string;
@@ -37,6 +42,7 @@ export type ShopLocation = {
   seoDescription: string;
   highlights: string[];
   services: LocationService[];
+  answers: LocationAnswer[];
   openingHours: OpeningHoursRow[];
   mapsQuery: string;
 };
@@ -57,10 +63,10 @@ export const locations: ShopLocation[] = [
     phoneDisplay: "073 211 0379",
     phoneHref: "+31732110379",
     intro:
-      "De eerste vestiging van Schoenmakerij Donders, gerund door Corne en Linda. Hier vindt u ambachtelijke reparatie, persoonlijke service en praktische winkelservices onder een dak.",
-    seoTitle: "Schoenmakerij Donders Vught | Schoenreparatie, sleutels en lederwaren",
+      "Bij Schoenmakerij Donders Vught aan de Raadhuisstraat 3D helpen Corne en Linda u met schoenreparatie, sleutelservice, tas reparatie, onderhoud, horlogebandjes, lederwaren en het DHL servicepoint. U krijgt persoonlijk advies en vakwerk met aandacht voor materiaal, pasvorm en dagelijks gebruik.",
+    seoTitle: "Schoenmakerij Donders Vught | Schoenreparatie en sleutelservice",
     seoDescription:
-      "Schoenmakerij Donders Vught aan de Raadhuisstraat 3D voor schoenreparatie, tas reparatie, sleutelservice, onderhoud, horlogebandjes, luxe lederwaren en DHL servicepoint.",
+      "Schoenmakerij Donders Vught aan de Raadhuisstraat 3D voor schoenreparatie, sleutelservice, tas reparatie, onderhoud, lederwaren en DHL servicepoint.",
     highlights: ["Familiebedrijf sinds 2017", "DHL servicepoint", "Luxe lederwaren"],
     services: [
       {
@@ -99,6 +105,18 @@ export const locations: ShopLocation[] = [
         icon: Package,
       },
     ],
+    answers: [
+      {
+        question: "Waar kan ik schoenen laten repareren in Vught?",
+        answer:
+          "Voor schoenreparatie in Vught kunt u terecht bij Schoenmakerij Donders aan de Raadhuisstraat 3D. Corne en Linda helpen u met herstel, onderhoud en advies voor schoenen, tassen en lederwaren.",
+      },
+      {
+        question: "Welke services vindt u bij Schoenmakerij Donders Vught?",
+        answer:
+          "De vestiging in Vught biedt schoenreparatie, tas reparatie, sleutelservice, onderhoud, horlogebandjes, luxe lederwaren en een DHL servicepoint.",
+      },
+    ],
     openingHours: [
       { label: "Zondag", value: "Gesloten" },
       { label: "Maandag", value: "Gesloten" },
@@ -122,10 +140,10 @@ export const locations: ShopLocation[] = [
     phoneDisplay: "073 211 0379",
     phoneHref: "+31732110379",
     intro:
-      "De vestiging in Den Bosch is sinds 2025 geopend en wordt gerund door Jimmy, zoon van Corne. U vindt hier dezelfde klantvriendelijke service en kwaliteit in de Rompertpassage.",
-    seoTitle: "Schoenmakerij Donders Den Bosch | Schoenreparatie, autosleutels en sneaker service",
+      "Schoenmakerij Donders Den Bosch vindt u in de Rompertpassage. Jimmy helpt u hier met schoenreparatie, tas reparatie, onderhoud, lederwaren, sneaker service en vragen over gewone sleutels en autosleutels. De vestiging combineert ambachtelijk herstel met praktische service dicht bij huis.",
+    seoTitle: "Schoenmakerij Donders Den Bosch | Schoenreparatie en sneaker service",
     seoDescription:
-      "Schoenmakerij Donders Den Bosch in de Rompertpassage voor schoenreparatie, tas reparatie, autosleutel service, onderhoud, sneaker service en luxe lederwaren.",
+      "Schoenmakerij Donders Den Bosch in de Rompertpassage voor schoenreparatie, sleutelservice, tas reparatie, onderhoud, sneaker service en lederwaren.",
     highlights: ["In de Rompertpassage", "Autosleutel service", "Sneaker service"],
     services: [
       {
@@ -157,6 +175,18 @@ export const locations: ShopLocation[] = [
         title: "Luxe lederwaren",
         description: "Lederwaren van onder meer Castelijn & Beerens en Bear Design.",
         icon: ShoppingBag,
+      },
+    ],
+    answers: [
+      {
+        question: "Waar vind ik een schoenmaker in Den Bosch Noord?",
+        answer:
+          "Schoenmakerij Donders Den Bosch zit in de Rompertpassage aan Rompertpassage 39. U kunt hier terecht voor schoenreparatie, tas reparatie, onderhoud, lederwaren en sneaker service.",
+      },
+      {
+        question: "Kan ik in Den Bosch terecht voor sleutels en sneakers?",
+        answer:
+          "Ja. De vestiging in Den Bosch vermeldt sleutelservice voor gewone sleutels en autosleutelvragen, en biedt daarnaast sneaker service.",
       },
     ],
     openingHours: [

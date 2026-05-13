@@ -15,8 +15,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Diensten | Schoenmakerij Donders Vught en Den Bosch"
-        description="Bekijk de diensten van Schoenmakerij Donders per vestiging: schoenreparatie, tas reparatie, sleutelservice, onderhoud, sneaker service, DHL servicepoint en lederwaren."
+        title="Diensten | Schoenreparatie, sleutels en lederwaren"
+        description="Bekijk per vestiging de diensten van Schoenmakerij Donders: schoenreparatie, sleutelservice, tas reparatie, onderhoud, sneaker service, DHL servicepoint en lederwaren."
         path="/diensten"
       />
       <StructuredData data={getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Diensten", path: "/diensten" }])} />
@@ -29,8 +29,8 @@ const Services = () => {
             <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Diensten per vestiging</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Wat kunnen wij voor u doen?</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Het aanbod verschilt iets per locatie. Kies bij twijfel de vestiging die u wilt bezoeken, dan ziet u direct de juiste
-              diensten en openingstijden.
+              Niet elke vestiging biedt precies dezelfde services. Bekijk per winkel waar u terecht kunt voor schoenreparatie,
+              sleutels, tassen, onderhoud, sneaker service, lederwaren of DHL-pakketten.
             </p>
           </div>
 

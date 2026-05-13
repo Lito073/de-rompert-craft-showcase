@@ -6,45 +6,24 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { StructuredData } from "@/components/StructuredData";
-import { getBreadcrumbSchema } from "@/lib/structuredData";
+import { faqs } from "@/data/faqs";
+import { getBreadcrumbSchema, getFAQPageSchema } from "@/lib/structuredData";
 import { getLocationPath, locations } from "@/data/locations";
-
-const faqs = [
-  {
-    question: "Moet ik eerst Vught of Den Bosch kiezen?",
-    answer:
-      "Ja, dat is het handigst. De diensten en openingstijden zijn per vestiging gescheiden, zodat u meteen de juiste informatie ziet.",
-  },
-  {
-    question: "Bieden beide vestigingen dezelfde diensten aan?",
-    answer:
-      "Er is veel overlap, maar niet alles is hetzelfde. Vught heeft bijvoorbeeld een DHL servicepoint, terwijl Den Bosch sneaker service en (auto)sleutel service vermeldt.",
-  },
-  {
-    question: "Kan ik zonder afspraak langskomen?",
-    answer:
-      "U kunt tijdens openingstijden langskomen. Voor specifieke of ingewikkelde vragen is bellen met de gewenste vestiging verstandig.",
-  },
-  {
-    question: "Zijn er al foto's van de winkels en het werk?",
-    answer:
-      "Nog niet. De website gebruikt voorlopig bestaande sfeerbeelden en placeholders; echte foto's kunnen later worden toegevoegd.",
-  },
-  {
-    question: "Welk telefoonnummer kan ik gebruiken?",
-    answer: "Voor beide vestigingen staat op dit moment 073 211 0379 vermeld.",
-  },
-];
 
 const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Veelgestelde vragen | Schoenmakerij Donders"
-        description="Antwoorden op veelgestelde vragen over Schoenmakerij Donders, de vestigingen in Vught en Den Bosch en de locatie-specifieke diensten."
+        title="Veelgestelde vragen | Schoenmakerij Donders Vught en Den Bosch"
+        description="Antwoorden over schoenreparatie, sleutelservice, tas reparatie, DHL servicepoint en sneaker service bij Schoenmakerij Donders in Vught en Den Bosch."
         path="/veelgestelde-vragen"
       />
-      <StructuredData data={getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Veelgestelde vragen", path: "/veelgestelde-vragen" }])} />
+      <StructuredData
+        data={[
+          getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Veelgestelde vragen", path: "/veelgestelde-vragen" }]),
+          getFAQPageSchema(faqs),
+        ]}
+      />
       <Navigation />
       <Breadcrumbs />
 
@@ -52,9 +31,7 @@ const FAQ = () => {
         <div className="container mx-auto">
           <div className="text-center mb-14 max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Veelgestelde vragen</h1>
-            <p className="text-lg text-muted-foreground">
-              Korte antwoorden over de twee vestigingen en het gebruik van de site.
-            </p>
+            <p className="text-lg text-muted-foreground">Korte antwoorden over onze vestigingen, diensten en praktische winkelinformatie.</p>
           </div>
 
           <div className="max-w-3xl mx-auto">

@@ -32,7 +32,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Over ons | Familiebedrijf Schoenmakerij Donders"
-        description="Schoenmakerij Donders is een familiebedrijf sinds 2017 met vestigingen in Vught en Den Bosch. Lees over het verhaal, de service en de kwaliteit."
+        description="Schoenmakerij Donders is een familiebedrijf sinds 2017 met vestigingen in Vught en Den Bosch. Lees over klantvriendelijkheid, service en degelijk vakwerk."
         path="/over-ons"
       />
       <StructuredData data={getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Over ons", path: "/over-ons" }])} />
@@ -46,8 +46,8 @@ const About = () => {
               <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Familiebedrijf sinds 2017</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Over Schoenmakerij Donders</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Wat begon in Vught is uitgegroeid tot een familiebedrijf met twee vestigingen. De basis is hetzelfde gebleven:
-                klantvriendelijkheid, service en kwaliteit.
+                Schoenmakerij Donders is een familiebedrijf sinds 2017. Wat begon in Vught is uitgebreid naar Den Bosch, met dezelfde
+                aandacht voor klantvriendelijkheid, service en degelijk vakwerk.
               </p>
             </div>
 
@@ -61,12 +61,13 @@ const About = () => {
                 <h2 className="text-3xl font-bold text-foreground mb-4">Van Vught naar Den Bosch</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Schoenmakerij Donders is een familiebedrijf sinds 2017. De eerste vestiging opende in Vught en wordt gerund
-                    door Corne en Linda.
+                    Schoenmakerij Donders is een familiebedrijf sinds 2017. De eerste vestiging opende in Vught en wordt gerund door
+                    Corne en Linda.
                   </p>
                   <p>
                     Vanaf 2025 is er een filiaal bij in Den Bosch. Deze vestiging wordt gerund door Jimmy, de zoon van Corne.
-                    Beide winkels hebben hun eigen locatiegegevens en diensten, maar delen dezelfde aandacht voor mensen en vakwerk.
+                    Beide winkels hebben hun eigen diensten en locatiegegevens, maar delen dezelfde aandacht voor mensen, service en
+                    degelijk vakwerk.
                   </p>
                 </div>
               </div>

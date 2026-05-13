@@ -17,13 +17,13 @@ const Footer = ({ children, waveTone = "background" }: FooterProps) => {
     <footer className="bg-[hsl(var(--craft-brown))] text-primary-foreground relative overflow-hidden">
       {children ?? <SectionWave tone={waveTone} variant="footer" className="h-20 md:h-24 lg:h-28" />}
       <div className="container mx-auto pt-28 pb-12 relative z-10 lg:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-10 lg:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16">
           <div>
             <div className="mb-5 flex justify-center lg:justify-start">
               <img
                 src={logo}
                 alt="Schoenmakerij Donders logo"
-                className="h-auto w-full max-w-[17rem] sm:max-w-[19rem]"
+                className="h-auto w-full max-w-[17rem] sm:max-w-[19rem] lg:max-w-[21rem]"
               />
               <h2 className="sr-only">{SITE_NAME}</h2>
             </div>
