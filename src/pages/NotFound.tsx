@@ -3,10 +3,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Home, ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const NotFound = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <SEO title="Pagina niet gevonden | Schoenmakerij Donders" description="Deze pagina van Schoenmakerij Donders bestaat niet of is verplaatst." path={window.location.pathname} />
       <Navigation />
       
       <div className="flex-1 flex items-center justify-center py-16">

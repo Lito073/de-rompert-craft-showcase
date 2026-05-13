@@ -1,118 +1,89 @@
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Footer from "@/components/Footer";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { StructuredData } from "@/components/StructuredData";
+import { getBreadcrumbSchema } from "@/lib/structuredData";
+import { getLocationPath, locations } from "@/data/locations";
+
+const faqs = [
+  {
+    question: "Moet ik eerst Vught of Den Bosch kiezen?",
+    answer:
+      "Ja, dat is het handigst. De diensten en openingstijden zijn per vestiging gescheiden, zodat u meteen de juiste informatie ziet.",
+  },
+  {
+    question: "Bieden beide vestigingen dezelfde diensten aan?",
+    answer:
+      "Er is veel overlap, maar niet alles is hetzelfde. Vught heeft bijvoorbeeld een DHL servicepoint, terwijl Den Bosch sneaker service en (auto)sleutel service vermeldt.",
+  },
+  {
+    question: "Kan ik zonder afspraak langskomen?",
+    answer:
+      "U kunt tijdens openingstijden langskomen. Voor specifieke of ingewikkelde vragen is bellen met de gewenste vestiging verstandig.",
+  },
+  {
+    question: "Zijn er al foto's van de winkels en het werk?",
+    answer:
+      "Nog niet. De website gebruikt voorlopig bestaande sfeerbeelden en placeholders; echte foto's kunnen later worden toegevoegd.",
+  },
+  {
+    question: "Welk telefoonnummer kan ik gebruiken?",
+    answer: "Voor beide vestigingen staat op dit moment 073 211 0379 vermeld.",
+  },
+];
 
 const FAQ = () => {
-  const faqs = [
-    {
-      question: "Hoe lang duurt een schoenreparatie?",
-      answer: "De meeste reparaties kunnen binnen 1-2 werkdagen worden uitgevoerd. Voor eenvoudige reparaties zoals nieuwe hakken of zolen kunt u vaak terwijl u wacht worden geholpen. Voor complexere reparaties vragen wij u om uw schoenen achter te laten."
-    },
-    {
-      question: "Kunnen jullie alle soorten sleutels bijmaken?",
-      answer: "Wij kunnen vrijwel alle soorten sleutels namaken, van gewone huissleutels tot speciale veiligheidssleutels. In de meeste gevallen kunnen wij dit terwijl u wacht doen. Voor zeer specifieke sleutels vragen wij u om contact met ons op te nemen."
-    },
-    {
-      question: "Wat zijn de kosten voor schoenreparatie?",
-      answer: "De kosten variëren afhankelijk van het type reparatie. Nieuwe hakken beginnen vanaf €15, nieuwe zolen vanaf €25. Voor een exacte prijsopgave kunt u uw schoenen bij ons langsbrengen of bellen naar 073 642 5737."
-    },
-    {
-      question: "Repareren jullie ook designertassen?",
-      answer: "Ja, wij hebben ervaring met het repareren van hoogwaardige designertassen en lederwaren. Wij behandelen elk item met de grootste zorg en gebruiken kwalitatieve materialen die passen bij uw tas."
-    },
-    {
-      question: "Moet ik een afspraak maken?",
-      answer: "Voor de meeste diensten is geen afspraak nodig. U kunt gewoon tijdens openingstijden langskomen. Voor complexere reparaties of als u zeker wilt zijn van directe service, kunt u ons van tevoren bellen."
-    },
-    {
-      question: "Hoe werkt de DHL pakketservice?",
-      answer: "Als DHL ServicePoint kunt u bij ons pakketten afgeven voor verzending en pakketten ophalen die voor u klaarliggen. U heeft hiervoor uw track & trace code of barcode nodig. Wij zijn geopend tijdens reguliere openingstijden."
-    },
-    {
-      question: "Bieden jullie garantie op reparaties?",
-      answer: "Ja, wij staan achter ons vakmanschap. Op alle reparaties geven wij garantie. Mocht er binnen een redelijke termijn iets mis gaan met de reparatie, dan maken wij dit kosteloos in orde."
-    },
-    {
-      question: "Kan ik betalen met pin?",
-      answer: "Ja, u kunt bij ons zowel contant als met pin betalen. Wij accepteren alle gangbare betaalmethoden."
-    },
-    {
-      question: "Waar kan ik parkeren?",
-      answer: "De Rompertpassage ligt in het centrum van 's-Hertogenbosch. Er zijn diverse parkeergarages in de buurt, zoals de Arena Parkeergarage en Parkeergarage Wolvenhoek. Ook zijn er parkeermogelijkheden op straat (betaald parkeren)."
-    },
-    {
-      question: "Zijn jullie ook open op feestdagen?",
-      answer: "Op de meeste feestdagen zijn wij gesloten. Voor specifieke openingstijden tijdens feestdagen kunt u ons bellen of onze website raadplegen waar wij actuele informatie plaatsen."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Veelgestelde vragen | Schoenmakerij Donders"
+        description="Antwoorden op veelgestelde vragen over Schoenmakerij Donders, de vestigingen in Vught en Den Bosch en de locatie-specifieke diensten."
+        path="/veelgestelde-vragen"
+      />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Home", path: "/" }, { name: "Veelgestelde vragen", path: "/veelgestelde-vragen" }])} />
       <Navigation />
       <Breadcrumbs />
 
-      <section className="py-16 lg:py-20">
+      <main className="py-16 lg:py-20">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-6 text-foreground">Veelgestelde Vragen</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Heeft u een vraag? Bekijk hieronder de antwoorden op de meest gestelde vragen.
+          <div className="text-center mb-14 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Veelgestelde vragen</h1>
+            <p className="text-lg text-muted-foreground">
+              Korte antwoorden over de twee vestigingen en het gebruik van de site.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="bg-card border border-border rounded-lg px-6"
-                >
+                <AccordionItem key={faq.question} value={`item-${index}`} className="bg-card border border-border rounded-lg px-6">
                   <AccordionTrigger className="text-left hover:no-underline py-5">
                     <span className="font-semibold text-lg">{faq.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
+                  <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">{faq.answer}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
 
-            <div className="mt-12 bg-accent/10 border border-accent/20 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">Staat uw vraag er niet bij?</h3>
-              <p className="text-muted-foreground mb-6">
-                Neem gerust contact met ons op. Wij helpen u graag verder!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+31736425737"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold"
-                >
-                  Bel ons: 073 642 5737
-                </a>
-                <a 
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-card border border-border text-foreground rounded-lg hover:bg-muted transition-colors font-semibold"
-                >
-                  Contactformulier
-                </a>
+            <div className="mt-12 rounded-lg bg-muted/35 p-6 text-center">
+              <h2 className="text-2xl font-bold text-foreground mb-3">Kies direct een vestiging</h2>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                {locations.map((location) => (
+                  <Button key={location.id} asChild>
+                    <Link to={getLocationPath(location)}>{location.shortName}</Link>
+                  </Button>
+                ))}
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
-      <Footer>
-        <svg className="absolute top-0 left-0 w-full h-24" preserveAspectRatio="none" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L0,64 C160,100 320,100 480,64 C640,28 800,28 960,64 C1120,100 1280,100 1440,64 L1440,0 Z" fill="hsl(var(--background))"/>
-        </svg>
-      </Footer>
+      <Footer />
     </div>
   );
 };
