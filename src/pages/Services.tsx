@@ -26,7 +26,7 @@ const Services = () => {
       <main className="py-16 lg:py-20">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-14">
-            <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Diensten per vestiging</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Diensten per vestiging</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Wat kunnen wij voor u doen?</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Niet elke vestiging biedt precies dezelfde services. Bekijk per winkel waar u terecht kunt voor schoenreparatie,

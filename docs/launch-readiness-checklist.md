@@ -63,6 +63,7 @@ Technische launch-fixes voor GitHub Pages in deze release: CI dwingt lint, build
 - [ ] `dist/index.html`, `dist/vught/index.html`, `dist/den-bosch/index.html`, `dist/diensten/index.html`, `dist/contact/index.html`, `dist/veelgestelde-vragen/index.html` bestaan na build.
 - [ ] `npm.cmd run check:seo` slaagt.
 - [ ] Google Search Console URL Inspection toont dat Google de belangrijkste content kan renderen.
+- [ ] Valideer HTML met W3C Nu Checker: https://validator.w3.org/nu/
 - [ ] Geen belangrijke content uitsluitend na interactie of alleen in afbeeldingen.
 - [ ] Alle interne links zijn echte `<a>`/React Router links met crawlbare routepaden.
 - [ ] Geen onbedoelde `noindex`, `nofollow` of robots-blokkade.
@@ -169,6 +170,16 @@ Technische launch-fixes voor GitHub Pages in deze release: CI dwingt lint, build
 ## 11. Performance En Core Web Vitals
 
 - [ ] Run Lighthouse/PageSpeed voor mobiel en desktop.
+- [ ] Run lokale projectchecks:
+  - [ ] `npm.cmd run lint`
+  - [ ] `npm.cmd run build`
+  - [ ] `npm.cmd run check:seo`
+  - [ ] `npm.cmd run optimize:images` na toevoegen of vervangen van JPG-assets.
+- [ ] Run Lighthouse CLI voor herhaalbare audits:
+  - [ ] Mobile: `npx.cmd -y lighthouse@latest https://lito073.github.io/de-rompert-craft-showcase/ --quiet --chrome-flags="--headless --no-sandbox" --form-factor=mobile --screenEmulation.mobile=true --screenEmulation.width=390 --screenEmulation.height=844 --screenEmulation.deviceScaleFactor=3 --throttling-method=simulate`
+  - [ ] Desktop: `npx.cmd -y lighthouse@latest https://lito073.github.io/de-rompert-craft-showcase/ --quiet --chrome-flags="--headless --no-sandbox" --preset=desktop`
+- [ ] Gebruik PageSpeed Insights voor Google/Lighthouse labdata en eventuele Core Web Vitals fielddata: https://pagespeed.web.dev/
+- [ ] Gebruik WebPageTest voor waterfall, repeat-view caching, locatiekeuze en netwerkprofielen: https://www.webpagetest.org/
 - [ ] Meet live URL, niet alleen lokale preview.
 - [ ] LCP doel: goed rond of onder 2,5s.
 - [ ] INP doel: goed rond of onder 200ms.
@@ -196,7 +207,8 @@ Technische launch-fixes voor GitHub Pages in deze release: CI dwingt lint, build
 - [ ] Afbeeldingen hebben passende alt-teksten.
 - [ ] Geen tekstoverlap op 320px, 375px, 390px, 768px, 1024px en desktop.
 - [ ] Test met Lighthouse accessibility.
-- [ ] Test met axe DevTools of vergelijkbaar.
+- [ ] Test met axe DevTools of vergelijkbaar: https://www.deque.com/axe/
+- [ ] Test met WAVE voor visuele accessibility feedback: https://wave.webaim.org/
 - [ ] Handmatig screenreader smoke-testen met NVDA of VoiceOver waar mogelijk.
 
 ## 13. Browser En Device QA
@@ -223,6 +235,9 @@ Technische launch-fixes voor GitHub Pages in deze release: CI dwingt lint, build
 - [ ] Controleer `.gitignore` voor lokale/private paden.
 - [ ] Als custom security headers nodig zijn, overweeg Cloudflare of andere CDN voor CSP/HSTS/Referrer-Policy.
 - [ ] Als geen CDN gebruikt wordt, leg vast dat GitHub Pages beperkte headercontrole heeft.
+- [ ] Test headers met MDN HTTP Observatory: https://developer.mozilla.org/en-US/observatory
+- [ ] Test headers met SecurityHeaders.com: https://securityheaders.com/
+- [ ] Bij custom hosting/CDN pas security headers actief toe: `Content-Security-Policy`, `Referrer-Policy`, `Permissions-Policy`, `X-Content-Type-Options` en lange cache headers voor fingerprinted assets.
 - [ ] Overweeg `<meta name="referrer" content="strict-origin-when-cross-origin">` als header niet kan.
 - [ ] Externe links gebruiken `rel="noopener noreferrer"` bij `target="_blank"`.
 - [ ] Geen third-party tracking toevoegen zonder toestemming/cookiebeleid.

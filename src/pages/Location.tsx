@@ -42,7 +42,7 @@ const Location = () => {
           <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
               <div className="min-w-0">
-                <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Vestiging {location.shortName}</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Vestiging {location.shortName}</p>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5 break-words">
                   {location.name}
                 </h1>

@@ -24,7 +24,7 @@ const Contact = () => {
       <main className="py-16 lg:py-20">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-14">
-            <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contact per vestiging</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Contact per vestiging</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Waar mogen we u helpen?</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Kies de vestiging die u wilt bezoeken voor schoenreparatie, sleutelservice, tas reparatie, onderhoud of lederwaren. U

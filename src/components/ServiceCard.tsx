@@ -12,10 +12,14 @@ const ServiceCard = ({ icon: Icon, title, description, image }: ServiceCardProps
   return (
     <Card className="overflow-hidden hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 transition-all duration-300 group border-border/50 hover:border-accent/30">
       {image && (
-        <div className="h-48 overflow-hidden">
+        <div className="aspect-[4/3] overflow-hidden">
           <img
             src={image}
             alt={title}
+            width={800}
+            height={600}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </div>

@@ -8,9 +8,78 @@ import { StructuredData } from "@/components/StructuredData";
 import { getOrganizationSchema } from "@/lib/structuredData";
 import { BRAND_QUOTE, featuredServices, getLocationPath, getMapsUrl, locations } from "@/data/locations";
 import { ArrowRight, KeyRound, MapPin, Phone, Quote, ShoppingBag, Wrench } from "lucide-react";
+import heroCraftsmanAvif from "@/assets/hero-craftsman.avif";
 import heroCraftsman from "@/assets/hero-craftsman.jpg";
+import heroCraftsmanWebp from "@/assets/hero-craftsman.webp";
+import serviceKeysAvif from "@/assets/service-keys.avif";
 import serviceShoes from "@/assets/service-shoes.jpg";
+import serviceShoesAvif from "@/assets/service-shoes.avif";
+import serviceShoesWebp from "@/assets/service-shoes.webp";
 import serviceKeys from "@/assets/service-keys.jpg";
+import serviceKeysWebp from "@/assets/service-keys.webp";
+
+type OptimizedImage = {
+  avif: string;
+  webp: string;
+  jpg: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+const homepageImages = {
+  hero: {
+    avif: heroCraftsmanAvif,
+    webp: heroCraftsmanWebp,
+    jpg: heroCraftsman,
+    alt: "Ambachtelijk werk bij Schoenmakerij Donders",
+    width: 1620,
+    height: 1080,
+  },
+  shoes: {
+    avif: serviceShoesAvif,
+    webp: serviceShoesWebp,
+    jpg: serviceShoes,
+    alt: "Schoenreparatie",
+    width: 1613,
+    height: 1080,
+  },
+  keys: {
+    avif: serviceKeysAvif,
+    webp: serviceKeysWebp,
+    jpg: serviceKeys,
+    alt: "Sleutelservice",
+    width: 1440,
+    height: 1080,
+  },
+} satisfies Record<string, OptimizedImage>;
+
+const OptimizedPicture = ({
+  image,
+  className,
+  loading = "lazy",
+  fetchPriority,
+}: {
+  image: OptimizedImage;
+  className: string;
+  loading?: "eager" | "lazy";
+  fetchPriority?: "high" | "low" | "auto";
+}) => (
+  <picture>
+    <source srcSet={image.avif} type="image/avif" />
+    <source srcSet={image.webp} type="image/webp" />
+    <img
+      src={image.jpg}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      loading={loading}
+      decoding="async"
+      fetchPriority={fetchPriority}
+      className={className}
+    />
+  </picture>
+);
 
 const Index = () => {
   const brandHighlights = [
@@ -33,7 +102,7 @@ const Index = () => {
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[1fr_0.9fr] gap-10 xl:gap-16 items-center">
               <div className="min-w-0">
-                <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Familiebedrijf sinds 2017</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Familiebedrijf sinds 2017</p>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground mb-5 break-words">
                   Schoenmakerij Donders in Vught en Den Bosch
                 </h1>
@@ -87,7 +156,10 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute -inset-5 bg-secondary/30 blur-3xl" />
                 <div className="relative overflow-hidden rounded-lg shadow-2xl">
-                  <img src={heroCraftsman} alt="Ambachtelijk werk bij Schoenmakerij Donders" className="h-[28rem] w-full object-cover" />
+                  <OptimizedPicture
+                    image={homepageImages.hero}
+                    className="h-[28rem] w-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -121,8 +193,8 @@ const Index = () => {
                   </div>
                 ))}
                 <div className="rounded-lg overflow-hidden sm:col-span-2 grid sm:grid-cols-2">
-                  <img src={serviceShoes} alt="Schoenreparatie" className="h-56 w-full object-cover" />
-                  <img src={serviceKeys} alt="Sleutelservice" className="h-56 w-full object-cover" />
+                  <OptimizedPicture image={homepageImages.shoes} className="h-56 w-full object-cover" />
+                  <OptimizedPicture image={homepageImages.keys} className="h-56 w-full object-cover" />
                 </div>
               </div>
             </div>

@@ -43,7 +43,7 @@ const About = () => {
         <section className="py-16 lg:py-20">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto text-center mb-14">
-              <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Familiebedrijf sinds 2017</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Familiebedrijf sinds 2017</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Over Schoenmakerij Donders</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Schoenmakerij Donders is een familiebedrijf sinds 2017. Wat begon in Vught is uitgebreid naar Den Bosch, met dezelfde

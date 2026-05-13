@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { getLocationPath, locations } from "@/data/locations";
 import { MapPin, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoAvif from "@/assets/donders-wordmark.avif";
 import logo from "@/assets/donders-wordmark.jpg";
+import logoWebp from "@/assets/donders-wordmark.webp";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -28,7 +30,18 @@ const Navigation = () => {
             className="flex items-center rounded-md bg-[hsl(var(--craft-brown))] px-2 py-1.5 shadow-sm transition-shadow hover:shadow-md"
             aria-label="Schoenmakerij Donders home"
           >
-            <img src={logo} alt="Schoenmakerij Donders logo" className="h-10 w-auto max-w-[10.5rem] object-contain md:max-w-[12rem]" />
+            <picture>
+              <source srcSet={logoAvif} type="image/avif" />
+              <source srcSet={logoWebp} type="image/webp" />
+              <img
+                src={logo}
+                alt="Schoenmakerij Donders logo"
+                width={900}
+                height={229}
+                decoding="async"
+                className="h-10 w-auto max-w-[10.5rem] object-contain md:max-w-[12rem]"
+              />
+            </picture>
           </Link>
 
           <div className="hidden lg:flex items-center space-x-1">

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Clock, MapPin, Phone } from "lucide-react";
+import logoAvif from "@/assets/donders-logo-brown.avif";
 import logo from "@/assets/donders-logo-brown.jpg";
+import logoWebp from "@/assets/donders-logo-brown.webp";
 import { getLocationPath, getMapsUrl, locations, SITE_NAME } from "@/data/locations";
 import { ReactNode } from "react";
 import SectionWave from "@/components/SectionWave";
@@ -20,14 +22,22 @@ const Footer = ({ children, waveTone = "background" }: FooterProps) => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16">
           <div>
             <div className="mb-5 flex justify-center lg:justify-start">
-              <img
-                src={logo}
-                alt="Schoenmakerij Donders logo"
-                className="h-auto w-full max-w-[17rem] sm:max-w-[19rem] lg:max-w-[21rem]"
-              />
+              <picture>
+                <source srcSet={logoAvif} type="image/avif" />
+                <source srcSet={logoWebp} type="image/webp" />
+                <img
+                  src={logo}
+                  alt="Schoenmakerij Donders logo"
+                  width={1200}
+                  height={494}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full max-w-[17rem] sm:max-w-[19rem] lg:max-w-[21rem]"
+                />
+              </picture>
               <h2 className="sr-only">{SITE_NAME}</h2>
             </div>
-            <p className="text-sm opacity-90 max-w-md text-center lg:text-left">
+            <p className="text-sm text-primary-foreground/95 max-w-md text-center lg:text-left">
               Familiebedrijf voor schoenreparatie, sleutelservice, tas reparatie, onderhoud en lederwaren in Vught en Den Bosch.
             </p>
           </div>
@@ -36,7 +46,7 @@ const Footer = ({ children, waveTone = "background" }: FooterProps) => {
             {locations.map((location) => (
               <div key={location.id}>
                 <h3 className="text-lg font-semibold mb-3 text-[hsl(var(--warm-amber))]">{location.shortName}</h3>
-                <div className="space-y-3 text-sm opacity-90">
+                <div className="space-y-3 text-sm text-primary-foreground/95">
                   <a href={getMapsUrl(location)} target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-[hsl(var(--warm-amber))]">
                     <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0 text-[hsl(var(--warm-amber))]" />
                     <span>
@@ -69,7 +79,7 @@ const Footer = ({ children, waveTone = "background" }: FooterProps) => {
           </div>
         </div>
 
-        <div className="border-t border-accent/25 mt-10 pt-6 text-center text-sm opacity-75">
+        <div className="border-t border-accent/25 mt-10 pt-6 text-center text-sm text-primary-foreground/90">
           <p>&copy; {new Date().getFullYear()} {SITE_NAME}. Alle rechten voorbehouden.</p>
         </div>
       </div>
