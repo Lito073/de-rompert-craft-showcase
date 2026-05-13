@@ -8,40 +8,40 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 42 27% 97%;
-    --foreground: 28 29% 16%;
+    --background: 42 31% 97%;
+    --foreground: 26 35% 13%;
 
-    --card: 38 30% 99%;
-    --card-foreground: 28 29% 16%;
+    --card: 40 38% 99%;
+    --card-foreground: 26 35% 13%;
 
-    --popover: 38 30% 99%;
-    --popover-foreground: 28 29% 16%;
+    --popover: 40 38% 99%;
+    --popover-foreground: 26 35% 13%;
 
-    --primary: 22 45% 24%;
-    --primary-foreground: 42 34% 96%;
+    --primary: 24 48% 18%;
+    --primary-foreground: 43 39% 96%;
 
-    --secondary: 39 44% 72%;
-    --secondary-foreground: 28 29% 16%;
+    --secondary: 38 48% 75%;
+    --secondary-foreground: 26 35% 13%;
 
-    --muted: 40 25% 91%;
-    --muted-foreground: 25 13% 39%;
+    --muted: 40 29% 93%;
+    --muted-foreground: 26 16% 41%;
 
-    --accent: 32 56% 43%;
-    --accent-foreground: 42 34% 96%;
+    --accent: 36 70% 47%;
+    --accent-foreground: 24 48% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 35 20% 95%;
 
-    --border: 34 20% 84%;
-    --input: 34 20% 84%;
-    --ring: 22 45% 24%;
+    --border: 36 22% 87%;
+    --input: 36 22% 87%;
+    --ring: 36 70% 47%;
 
     --radius: 0.5rem;
     
-    --warm-leather: 22 45% 24%;
-    --warm-amber: 34 58% 48%;
-    --warm-cream: 42 30% 92%;
-    --craft-brown: 18 38% 20%;
+    --warm-leather: 24 48% 18%;
+    --warm-amber: 36 72% 51%;
+    --warm-cream: 42 34% 93%;
+    --craft-brown: 22 46% 15%;
 
     --sidebar-background: 0 0% 98%;
 

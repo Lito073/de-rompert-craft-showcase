@@ -26,7 +26,7 @@ const Services = () => {
       <main className="py-16 lg:py-20">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-14">
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Diensten per vestiging</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Diensten per vestiging</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Wat kunnen wij voor u doen?</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Het aanbod verschilt iets per locatie. Kies bij twijfel de vestiging die u wilt bezoeken, dan ziet u direct de juiste
@@ -56,7 +56,7 @@ const Services = () => {
                     const Icon = service.icon;
                     return (
                       <div key={service.title} className="flex items-start gap-3 rounded-md bg-muted/50 p-3">
-                        <Icon className="h-5 w-5 text-primary mt-0.5" />
+                        <Icon className="h-5 w-5 text-accent mt-0.5" />
                         <div>
                           <h3 className="font-semibold text-foreground">{service.title}</h3>
                           <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
@@ -74,7 +74,7 @@ const Services = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {allServiceTitles.map((title) => (
                 <div key={title} className="flex items-center gap-2 text-foreground">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <CheckCircle2 className="h-5 w-5 text-accent" />
                   <span>{title}</span>
                 </div>
               ))}

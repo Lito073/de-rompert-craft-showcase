@@ -24,7 +24,7 @@ const Contact = () => {
       <main className="py-16 lg:py-20">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-14">
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Contact per vestiging</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contact per vestiging</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Waar mogen we u helpen?</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Kies hieronder de vestiging die u wilt bezoeken. Zo blijven adres, diensten en openingstijden duidelijk gescheiden.
@@ -39,12 +39,12 @@ const Contact = () => {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="rounded-md bg-primary/10 p-3 text-primary">
+                    <div className="rounded-md bg-accent/10 p-3 text-accent">
                       <MapPin className="h-6 w-6" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Adres</h3>
-                      <a href={getMapsUrl(location)} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                      <a href={getMapsUrl(location)} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent">
                         {location.address.streetAddress}
                         <br />
                         {location.address.postalCode} {location.address.locality}
@@ -53,19 +53,19 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="rounded-md bg-primary/10 p-3 text-primary">
+                    <div className="rounded-md bg-accent/10 p-3 text-accent">
                       <Phone className="h-6 w-6" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Telefoon</h3>
-                      <a href={`tel:${location.phoneHref}`} className="text-muted-foreground hover:text-primary">
+                      <a href={`tel:${location.phoneHref}`} className="text-muted-foreground hover:text-accent">
                         {location.phoneDisplay}
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="rounded-md bg-primary/10 p-3 text-primary">
+                    <div className="rounded-md bg-accent/10 p-3 text-accent">
                       <Clock className="h-6 w-6" />
                     </div>
                     <div className="flex-1">

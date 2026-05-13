@@ -7,12 +7,18 @@ import { Button } from "@/components/ui/button";
 import { StructuredData } from "@/components/StructuredData";
 import { getOrganizationSchema } from "@/lib/structuredData";
 import { BRAND_QUOTE, featuredServices, getLocationPath, getMapsUrl, locations } from "@/data/locations";
-import { ArrowRight, MapPin, Phone, Quote } from "lucide-react";
+import { ArrowRight, KeyRound, MapPin, Phone, Quote, ShoppingBag, Wrench } from "lucide-react";
 import heroCraftsman from "@/assets/hero-craftsman.jpg";
 import serviceShoes from "@/assets/service-shoes.jpg";
 import serviceKeys from "@/assets/service-keys.jpg";
 
 const Index = () => {
+  const brandHighlights = [
+    { label: "Ambachtelijk schoenherstel", icon: Wrench },
+    { label: "Luxe lederwaren", icon: ShoppingBag },
+    { label: "Sleutelservice", icon: KeyRound },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -27,7 +33,7 @@ const Index = () => {
           <div className="container mx-auto">
             <div className="grid lg:grid-cols-[1fr_0.9fr] gap-10 xl:gap-16 items-center">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Familiebedrijf sinds 2017</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Familiebedrijf sinds 2017</p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground mb-5">
                   Kies uw Schoenmakerij Donders vestiging
                 </h1>
@@ -35,29 +41,40 @@ const Index = () => {
                   Vught en Den Bosch hebben ieder hun eigen diensten, openingstijden en adres. Kies de winkel die u wilt bezoeken,
                   dan ziet u meteen de juiste informatie.
                 </p>
+                <div className="mb-8 flex flex-wrap gap-2.5">
+                  {brandHighlights.map(({ label, icon: Icon }) => (
+                    <span
+                      key={label}
+                      className="inline-flex items-center gap-2 rounded-md border border-accent/25 bg-accent/8 px-3 py-2 text-sm font-medium text-primary"
+                    >
+                      <Icon className="h-4 w-4 text-accent" />
+                      {label}
+                    </span>
+                  ))}
+                </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {locations.map((location) => (
                     <Link
                       key={location.id}
                       to={getLocationPath(location)}
-                      className="group rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                      className="group rounded-lg border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/35 hover:shadow-xl hover:shadow-accent/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     >
                       <div className="flex items-center justify-between gap-4 mb-5">
                         <div>
                           <p className="text-sm text-muted-foreground">Vestiging</p>
                           <h2 className="text-2xl font-bold text-foreground">{location.shortName}</h2>
                         </div>
-                        <ArrowRight className="h-6 w-6 text-primary transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="h-6 w-6 text-accent transition-transform group-hover:translate-x-1" />
                       </div>
                       <div className="space-y-3 text-sm text-muted-foreground">
                         <div className="flex items-start gap-2">
-                          <MapPin className="h-4 w-4 text-primary mt-0.5" />
+                          <MapPin className="h-4 w-4 text-accent mt-0.5" />
                           <span>
                             {location.address.streetAddress}, {location.address.locality}
                           </span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <Phone className="h-4 w-4 text-primary" />
+                          <Phone className="h-4 w-4 text-accent" />
                           <span>{location.phoneDisplay}</span>
                         </div>
                       </div>
@@ -88,14 +105,14 @@ const Index = () => {
                 </p>
                 <div className="rounded-lg bg-primary text-primary-foreground p-6">
                   <Quote className="h-8 w-8 mb-4 opacity-80" />
-                  <p className="text-xl font-semibold leading-snug">“{BRAND_QUOTE}”</p>
+                  <p className="text-xl font-semibold leading-snug">"{BRAND_QUOTE}"</p>
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 {featuredServices.map(({ title, icon: Icon }) => (
                   <div key={title} className="rounded-lg border border-border bg-card p-5">
                     <div className="flex items-center gap-3">
-                      <div className="rounded-md bg-primary/10 p-2 text-primary">
+                      <div className="rounded-md bg-accent/10 p-2 text-accent">
                         <Icon className="h-5 w-5" />
                       </div>
                       <h3 className="font-semibold text-foreground">{title}</h3>
@@ -117,7 +134,7 @@ const Index = () => {
             <div className="text-center max-w-3xl mx-auto mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Twee winkels, duidelijk gescheiden informatie</h2>
               <p className="text-muted-foreground text-lg">
-                Gebruik de locatiepagina’s voor de meest actuele vestiging-specifieke diensten, openingstijden en route.
+                Gebruik de locatiepagina's voor de meest actuele vestiging-specifieke diensten, openingstijden en route.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">

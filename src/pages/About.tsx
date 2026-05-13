@@ -43,7 +43,7 @@ const About = () => {
         <section className="py-16 lg:py-20">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto text-center mb-14">
-              <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Familiebedrijf sinds 2017</p>
+              <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Familiebedrijf sinds 2017</p>
               <h1 className="text-4xl md:text-5xl font-bold mb-5 text-foreground">Over Schoenmakerij Donders</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Wat begon in Vught is uitgegroeid tot een familiebedrijf met twee vestigingen. De basis is hetzelfde gebleven:
@@ -54,7 +54,7 @@ const About = () => {
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start mb-14">
               <div className="rounded-lg bg-primary text-primary-foreground p-8">
                 <Quote className="h-10 w-10 mb-5 opacity-80" />
-                <p className="text-2xl md:text-3xl font-semibold leading-snug">“{BRAND_QUOTE}”</p>
+                <p className="text-2xl md:text-3xl font-semibold leading-snug">"{BRAND_QUOTE}"</p>
               </div>
 
               <div className="rounded-lg border border-border bg-card p-8">
@@ -75,7 +75,7 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-5 mb-14">
               {values.map(({ title, description, icon: Icon }) => (
                 <div key={title} className="rounded-lg border border-border bg-card p-6">
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-md bg-accent/10 text-accent">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
@@ -86,7 +86,7 @@ const About = () => {
 
             <section className="rounded-lg bg-muted/35 p-6 md:p-8">
               <div className="flex items-center gap-3 mb-6">
-                <Wrench className="h-7 w-7 text-primary" />
+                <Wrench className="h-7 w-7 text-accent" />
                 <h2 className="text-2xl font-bold text-foreground">Onze vestigingen</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-4">

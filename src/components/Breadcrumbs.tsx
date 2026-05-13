@@ -20,7 +20,7 @@ const Breadcrumbs = () => {
     <nav className="container mx-auto py-4 px-4" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2 text-sm text-muted-foreground">
         <li>
-          <Link to="/" className="hover:text-primary transition-colors flex items-center">
+          <Link to="/" className="hover:text-accent transition-colors flex items-center">
             <Home className="h-4 w-4" />
           </Link>
         </li>
@@ -35,7 +35,7 @@ const Breadcrumbs = () => {
               {isLast ? (
                 <span className="font-medium text-foreground">{breadcrumbName}</span>
               ) : (
-                <Link to={routeTo} className="hover:text-primary transition-colors">
+                <Link to={routeTo} className="hover:text-accent transition-colors">
                   {breadcrumbName}
                 </Link>
               )}

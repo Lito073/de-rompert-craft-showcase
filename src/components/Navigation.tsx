@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { getLocationPath, locations } from "@/data/locations";
 import { MapPin, Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.avif";
+import logo from "@/assets/donders-wordmark.jpg";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -20,11 +20,15 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-card/90 border-b border-border/50 sticky top-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-card/75 shadow-sm">
+    <nav className="bg-card/92 border-b border-border/60 sticky top-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-card/80 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center" aria-label="Schoenmakerij Donders home">
-            <img src={logo} alt="Schoenmakerij Donders logo" className="h-12 w-auto" />
+        <div className="flex items-center justify-between h-[4.5rem]">
+          <Link
+            to="/"
+            className="flex items-center rounded-md bg-[hsl(var(--craft-brown))] px-2 py-1.5 shadow-sm transition-shadow hover:shadow-md"
+            aria-label="Schoenmakerij Donders home"
+          >
+            <img src={logo} alt="Schoenmakerij Donders logo" className="h-10 w-auto max-w-[10.5rem] object-contain md:max-w-[12rem]" />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-1">
@@ -52,7 +56,7 @@ const Navigation = () => {
           </div>
 
           <button
-            className="md:hidden rounded-md p-2 hover:bg-muted"
+            className="md:hidden rounded-md p-2 text-primary hover:bg-accent/10"
             onClick={() => setMobileMenuOpen((open) => !open)}
             aria-label="Navigatie openen of sluiten"
             aria-expanded={mobileMenuOpen}

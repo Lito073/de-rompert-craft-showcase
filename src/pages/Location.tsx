@@ -41,14 +41,14 @@ const Location = () => {
           <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">Vestiging {location.shortName}</p>
+                <p className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Vestiging {location.shortName}</p>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
                   {location.name}
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mb-6">{location.intro}</p>
                 <div className="flex flex-wrap gap-3 mb-8">
                   {location.highlights.map((highlight) => (
-                    <span key={highlight} className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                    <span key={highlight} className="rounded-full bg-accent/10 px-4 py-2 text-sm font-medium text-primary">
                       {highlight}
                     </span>
                   ))}
@@ -71,10 +71,10 @@ const Location = () => {
 
               <aside className="rounded-lg border border-border bg-card p-6 shadow-lg">
                 <div className="flex items-start gap-3 mb-6">
-                  <MapPin className="h-6 w-6 text-primary mt-1" />
+                  <MapPin className="h-6 w-6 text-accent mt-1" />
                   <div>
                     <h2 className="text-xl font-bold text-foreground mb-1">Adres</h2>
-                    <a href={getMapsUrl(location)} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                    <a href={getMapsUrl(location)} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent">
                       {location.address.streetAddress}
                       <br />
                       {location.address.postalCode} {location.address.locality}
@@ -82,7 +82,7 @@ const Location = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-3 mb-4">
-                  <Clock className="h-6 w-6 text-primary" />
+                  <Clock className="h-6 w-6 text-accent" />
                   <h2 className="text-xl font-bold text-foreground">Openingstijden</h2>
                 </div>
                 <div className="space-y-3">
@@ -120,7 +120,7 @@ const Location = () => {
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-center">
               <div className="rounded-lg bg-primary text-primary-foreground p-8">
                 <Quote className="h-10 w-10 mb-5 opacity-80" />
-                <p className="text-2xl font-semibold leading-snug">“{BRAND_QUOTE}”</p>
+                <p className="text-2xl font-semibold leading-snug">"{BRAND_QUOTE}"</p>
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-4">Familiebedrijf met aandacht voor mensen</h2>
